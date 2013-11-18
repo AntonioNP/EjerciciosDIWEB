@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Práctica Togle</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.3.min.js"><\/script>')</script>
+        <link rel="stylesheet" href="style.css" type="text/css" media=screen>
+    </head>
+    <body>
+        <div id="panelizquierdo">
+            <p>Panel izquierdo</p>
+        </div>
+        <div id="panelcentral">
+            <p>Panel central</p>
+        </div>
+        <div id="panelderecho">
+            <p>Panel derecho</p>
+            <input type="button" id="boton" value="¿Mostrar / Ocultar?" /><br />            
+            <div id="target">
+                <img src="img/01.jpg" alt="">
+                <img src="img/02.jpg" alt="">
+                <img src="img/03.jpg" alt="">
+                <img src="img/04.jpg" alt="">                      
+                <img src="img/05.jpg" alt="">   
+                <img src="img/06.jpg" alt="">        
+                <img src="img/07.jpg" alt="">        
+                <img src="img/08.jpg" alt="">     
+                <img src="img/09.jpg" alt="">        
+                <img src="img/10.jpg" alt="">      
+            </div>
+        </div>
+        <script>
+            $("#boton").click(function() {
+                $('#target').toggle("slow");
+            });
+        </script>
+    </body>
+</html>	
