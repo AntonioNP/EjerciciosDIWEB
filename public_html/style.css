@@ -1,0 +1,40 @@
+html, body {
+    height: 110%; 
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    height: 100%;
+    float: left;
+}
+
+img{
+    padding: 1%;
+    width: 47%;
+}
+
+#panelizquierdo {
+    height: 100%;
+    width: 20%;
+    background-color: grey;
+}
+
+#panelcentral {
+    height: 100%;
+    background-color: darkgrey;
+    width: 59%;
+}
+
+#panelderecho {
+    height: 100%;
+    width: 20%;
+    background-color: grey;
+}
+
+#panelderecho > img {
+    width: 48%;
+}
+button {
+    display: block;
+}
