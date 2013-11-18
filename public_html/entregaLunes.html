@@ -32,6 +32,14 @@
                         panel_mostrado = 0;
                     }
                 });
+                
+                $(".hola").bind('mouseenter',function() {
+                    $(this).animate({"width": "60%"});
+                });
+                $(".hola").bind('mouseleave',function() {
+                    $(this).animate({"width": "47%"});
+                });
+                
                 $("#mandar").click(function() {
 
                     if (estado == 0) {
@@ -56,7 +64,7 @@
         <div id="izquierda"><p>Panel de la izquierda</p><img class="foto_izq"/></div>
         <div id="centro"><p>Panel del centro</p>
             <div id="imagen_centro">
-                <div><img /></div>
+                <div><img class="hola" /></div>
                 <div><input id="mandar" type="button" value="Mandar al panel izquierdo"/></div>
             </div>
         </div>

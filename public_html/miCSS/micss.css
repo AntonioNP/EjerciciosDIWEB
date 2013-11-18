@@ -1,0 +1,12 @@
+body{
+    width: 80%;
+    background-color: palegoldenrod;
+    padding: 50px;
+}
+#firma{
+    text-align: right;
+    text-decoration-color: activeborder;
+}
+#titulo{
+    text-align: center;
+}
