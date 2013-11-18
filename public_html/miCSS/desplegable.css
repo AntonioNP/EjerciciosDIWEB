@@ -1,0 +1,69 @@
+body {
+    margin: 0px;
+    font-family: "Century gothic", "Ubuntu", "Verdana";
+}
+
+#desplegable {
+    display: none;
+}
+
+.foto_central{
+    position: relative;
+    text-align: center;
+}
+
+.foto_izq{
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+
+.foto{
+    float: left;
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 50%;
+}
+
+.foto:hover {
+    box-shadow: 10px 10px 5px #888;
+}
+
+#imagen_centro{
+    text-align: center;
+}
+
+#izquierda {
+    float: left;
+    width: 20%;
+    background: #BBB;
+    height: 2048px;
+}
+
+#centro {
+    float: left;
+    width: 60%;
+    background: #DDD;
+    height: 2048px;
+}
+
+#derecha {
+    float: left;
+    width: 20%;
+    background: #BBB;
+    height: 2048px;
+}
+
+#panel{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: #888;
+    border-bottom: 3px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 3px solid black;
+}
