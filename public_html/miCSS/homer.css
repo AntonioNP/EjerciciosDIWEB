@@ -1,0 +1,32 @@
+body{
+    width: 90%;
+    background-image: url("imgHomer/fondo.jpg");
+    background-repeat: no-repeat;
+}
+#encabezado{
+    text-align: center;
+}
+#menu{
+    padding: 1%;
+    border: solid black 1px;
+    border-radius: 15px 0px;
+    width: 18%;
+    float: left;
+    background-color: white;
+}
+#centro{
+    border-radius: 0px 15px;
+    opacity: 0.5;
+    margin-left: 1%;
+    width: 78%;
+    border: solid black 1px;
+    float: left;
+    background-color: white;
+    height: 182px;
+}
+#menu ul{
+    list-style: none;
+}
+#menu a{
+    text-decoration: none;
+}
