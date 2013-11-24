@@ -27,10 +27,16 @@
                     $("#borracho1").click(function() {
                         $("#borracho1").hide("500")
                     });
+                    $("#quitar").click(function() {
+                        $("#borracho1").hide("500")
+                    });
                 });
                 $("#level2").click(function() {
                     $("#borracho2").show("slow")
                     $("#borracho2").click(function() {
+                        $("#borracho2").hide("500")
+                    });
+                    $("#quitar").click(function() {
                         $("#borracho2").hide("500")
                     });
                 });
@@ -39,8 +45,82 @@
                     $("#borracho3").click(function() {
                         $("#borracho3").hide("500")
                     });
+                    $("#quitar").click(function() {
+                        $("#borracho3").hide("500")
+                    });
                 });
-
+                $("#ensimismo").click(function() {
+                    $("#pensando1").show("slow")
+                    $("#pensando1").click(function() {
+                        $("#pensando1").hide("500")
+                    });
+                    $("#quitar").click(function() {
+                        $("#pensando1").hide("500")
+                    });
+                });
+                $("#rosquillas").click(function() {
+                    $("#pensando2").show("slow")
+                    $("#pensando2").click(function() {
+                        $("#pensando2").hide("500")
+                    });
+                    $("#quitar").click(function() {
+                        $("#pensando2").hide("500")
+                    });
+                });
+                $("#cerveza").click(function() {
+                    $("#pensando3").show("slow")
+                    $("#pensando3").click(function() {
+                        $("#pensando3").hide("500")
+                    });
+                    $("#quitar").click(function() {
+                        $("#pensando3").hide("500")
+                    });
+                });
+                $("#hMarge").click(function() {
+                    $("#marge").show("slow")
+                    $("#marge").click(function() {
+                        $("#marge").hide("500")
+                    });
+                    $("#quitar").click(function() {
+                        $("#marge").hide("500")
+                    });
+                });
+                $("#hBart").click(function() {
+                    $("#bart").show("slow")
+                    $("#bart").click(function() {
+                        $("#bart").hide("500")
+                    });
+                    $("#quitar").click(function() {
+                        $("#bart").hide("500")
+                    });
+                });
+                $("#hLisa").click(function() {
+                    $("#lisa").show("slow")
+                    $("#lisa").click(function() {
+                        $("#lisa").hide("500")
+                    });
+                    $("#quitar").click(function() {
+                        $("#lisa").hide("500")
+                    });
+                });
+                $("#hMaggie").click(function() {
+                    $("#maggie").show("slow")
+                    $("#maggie").click(function() {
+                        $("#maggie").hide("500")
+                    });
+                    $("#quitar").click(function() {
+                        $("#maggie").hide("500")
+                    });
+                });
+                $("#todos").click(function() {
+                    $("#simpsons").show("slow")
+                    $("#simpsons").click(function() {
+                        $("#simpsons").hide("500")
+                    });
+                    $("#quitar").click(function() {
+                        $("#simpsons").hide("500")
+                    });
+                });
             });
         </script>
     </head>
@@ -49,29 +129,29 @@
             <h1>Welcome to HomerWeb!</h1>
         </div>
         <div id="menu">
-            <h3>Elige a tu Homer preferido:</h3>
+            <h3>Choose your favorite Homer:</h3>
             <ul> 
-                <li><a href="#" class="actual">Borracho</a>
+                <li><a href="#" class="actual">Drunk</a>
                     <ul class="submenu">
                         <li><a id="level1" href="#" >Level 1</a></li>
                         <li><a id="level2" href="#" >Level 2</a></li>
                         <li><a id="level3" href="#" >Level 3</a></li>
                     </ul>
                 </li> 
-                <li><a href="#" class="actual">Pensando</a>
+                <li><a href="#" class="actual">Thinking</a>
                     <ul class="submenu">
-                        <li><a href="#" >En si mismo</a></li>
-                        <li><a href="#" >Rosquillas</a></li>
-                        <li><a href="#" >Cerveza</a> </li>
+                        <li><a id="ensimismo" href="#" >In itself</a></li>
+                        <li><a id="rosquillas" href="#" >Bagel</a></li>
+                        <li><a id="cerveza" href="#" >Beer</a> </li>
                     </ul>
                 </li>
-                <li><a href="#" class="actual">Simspons</a>
+                <li><a href="#" class="actual">Simpsons</a>
                     <ul class="submenu">
-                        <li><a href="#" >Con Marge</a></li>
-                        <li><a href="#" >Con Bart</a></li>
-                        <li><a href="#" >Con Lisa</a> </li>
-                        <li><a href="#" >Con Maggie</a> </li>
-                        <li><a href="#" >Todos</a> </li>
+                        <li><a id="hMarge" href="#" >Con Marge</a></li>
+                        <li><a id="hBart" href="#" >Con Bart</a></li>
+                        <li><a id="hLisa" href="#" >Con Lisa</a> </li>
+                        <li><a id="hMaggie" href="#" >Con Maggie</a> </li>
+                        <li><a id="todos" href="#" >The Simpsons</a> </li>
                     </ul>
                 </li>
             </ul>
@@ -93,7 +173,8 @@
             <img id="simpsons" src="miCSS/imgHomer/simpsons.jpg" />
         </div>
         <div id="derecha">
-            <h3>ola k ase?</h3>
+            <input id="quitar" type="button" value="Remove image" /> 
+            <h3>Web page made by Antonio Navarro Peris</h3>
         </div>
     </body>
 </html>
