@@ -22,11 +22,24 @@
                         $(this).parent().find('ul').hide(1000);
                     }
                 });
-                /*
-                 $("#botonOcultar").click(function(){$("#texto1").hide("slow")});
-                 $("#botonMostrar").click(function(){$("#texto1").show("slow")});
-                 */
-
+                $("#level1").click(function() {
+                    $("#borracho1").show("slow")
+                    $("#borracho1").click(function() {
+                        $("#borracho1").hide("500")
+                    });
+                });
+                $("#level2").click(function() {
+                    $("#borracho2").show("slow")
+                    $("#borracho2").click(function() {
+                        $("#borracho2").hide("500")
+                    });
+                });
+                $("#level3").click(function() {
+                    $("#borracho3").show("slow")
+                    $("#borracho3").click(function() {
+                        $("#borracho3").hide("500")
+                    });
+                });
 
             });
         </script>
@@ -40,9 +53,9 @@
             <ul> 
                 <li><a href="#" class="actual">Borracho</a>
                     <ul class="submenu">
-                        <li><a href="#" >Level 1</a></li>
-                        <li><a href="#" >Level 2</a></li>
-                        <li><a href="#" >Level 3</a></li>
+                        <li><a id="level1" href="#" >Level 1</a></li>
+                        <li><a id="level2" href="#" >Level 2</a></li>
+                        <li><a id="level3" href="#" >Level 3</a></li>
                     </ul>
                 </li> 
                 <li><a href="#" class="actual">Pensando</a>
@@ -64,24 +77,23 @@
             </ul>
         </div>	
         <div id="centro">
-            
-            <div id="imgElegida">
-                <img class="img" src="miCSS/imgHomer/bart.jpg" />
-                <img class="img" src="miCSS/imgHomer/borracho1.jpg" />
-                <img class="img" src="miCSS/imgHomer/borracho2.gif" />
-                <img class="img" src="miCSS/imgHomer/borracho3.jpg" />
-                <img class="img" src="miCSS/imgHomer/lisa.jpg" />
-                <img class="img" src="miCSS/imgHomer/maggie.gif" />
-                <img class="img" src="miCSS/imgHomer/marge.jpg" />
-                <img class="img" src="miCSS/imgHomer/pensando1.jpg" />
-                <img class="img" src="miCSS/imgHomer/pensando2.jpg" />
-                <img class="img" src="miCSS/imgHomer/pensando3.jpg" />
-                <img class="img" src="miCSS/imgHomer/rockero1.gif" />
-                <img class="img" src="miCSS/imgHomer/rockero2.gif" />
-                <img class="img" src="miCSS/imgHomer/rockero3.gif" />
-                <img class="img" src="miCSS/imgHomer/simpsons.jpg" />
-            </div>
-            
+            <img id="bart" src="miCSS/imgHomer/bart.jpg" />
+            <img id="borracho1" src="miCSS/imgHomer/borracho1.jpg" />
+            <img id="borracho2" src="miCSS/imgHomer/borracho2.gif" />
+            <img id="borracho3" src="miCSS/imgHomer/borracho3.jpg" />
+            <img id="lisa" src="miCSS/imgHomer/lisa.jpg" />
+            <img id="maggie" src="miCSS/imgHomer/maggie.gif" />
+            <img id="marge" src="miCSS/imgHomer/marge.jpg" />
+            <img id="pensando1" src="miCSS/imgHomer/pensando1.jpg" />
+            <img id="pensando2" src="miCSS/imgHomer/pensando2.jpg" />
+            <img id="pensando3" src="miCSS/imgHomer/pensando3.jpg" />
+            <img id="rockero1" src="miCSS/imgHomer/rockero1.gif" />
+            <img id="rockero2" src="miCSS/imgHomer/rockero2.gif" />
+            <img id="rockero3" src="miCSS/imgHomer/rockero3.gif" />
+            <img id="simpsons" src="miCSS/imgHomer/simpsons.jpg" />
+        </div>
+        <div id="derecha">
+            <h3>ola k ase?</h3>
         </div>
     </body>
 </html>

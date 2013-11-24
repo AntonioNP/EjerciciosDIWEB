@@ -2,29 +2,36 @@ body{
     width: 90%;
     background-image: url("imgHomer/fondo.jpg");
     background-repeat: no-repeat;
+    padding: 50px;
 }
 #encabezado{
     float: none;
     text-align: center;
 }
 #menu{
-    margin: 5px;
     padding: 1%;
     border: solid black 1px;
-    border-radius: 15px 0px;
-    width: 18%;
+    border-radius: 20px 0px 0px 20px;
+    width: 20%;
     float: left;
     background-color: white;
 }
-#centro{
-    border-radius: 0px 15px;
-    opacity: 0.5;
+#centro{  
     margin-left: 1%;
-    width: 52%;
     border: solid black 1px;
     float: left;
     background-color: white;
-    height: 150px;
+    width: 400px;
+    height: 550px;
+}
+#derecha{
+    border: solid black 1px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: white;
+    float: left;
+    margin-left: 1%;
+    width: 20%;
+    padding: 1%;
 }
 #menu ul{
     list-style: none;
@@ -33,6 +40,9 @@ body{
     text-decoration: none;
 }
 
-#imgElegida{
+#borracho1, #borracho2, #borracho3, #pensando1, #pensando2, #pensando3, #bart, #marge, #maggie, #lisa, #simpsons, 
+#rockero1, #rockero2, #rockero3{
     display: none;
+    width: 350px;
+    height: 500px;
 }
