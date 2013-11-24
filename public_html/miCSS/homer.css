@@ -4,9 +4,11 @@ body{
     background-repeat: no-repeat;
 }
 #encabezado{
+    float: none;
     text-align: center;
 }
 #menu{
+    margin: 5px;
     padding: 1%;
     border: solid black 1px;
     border-radius: 15px 0px;
@@ -18,15 +20,19 @@ body{
     border-radius: 0px 15px;
     opacity: 0.5;
     margin-left: 1%;
-    width: 78%;
+    width: 52%;
     border: solid black 1px;
     float: left;
     background-color: white;
-    height: 182px;
+    height: 150px;
 }
 #menu ul{
     list-style: none;
 }
 #menu a{
     text-decoration: none;
+}
+
+#imgElegida{
+    display: none;
 }

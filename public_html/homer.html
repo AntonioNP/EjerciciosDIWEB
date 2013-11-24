@@ -5,6 +5,31 @@
         <title>HomerWeb</title>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <link rel="stylesheet" href="miCSS/homer.css" />
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".submenu").hide();
+                $("a.actual").click(function() {
+                    if ($(this).parent().find('ul').css("display") == "none")
+                    {
+                        $(this).parent().find('ul').show(1000);
+                    }
+                    else
+                    {
+                        $(this).parent().find('ul').hide(1000);
+                    }
+                });
+                /*
+                 $("#botonOcultar").click(function(){$("#texto1").hide("slow")});
+                 $("#botonMostrar").click(function(){$("#texto1").show("slow")});
+                 */
+
+
+            });
+        </script>
     </head>
     <body>
         <div id="encabezado">
@@ -13,7 +38,6 @@
         <div id="menu">
             <h3>Elige a tu Homer preferido:</h3>
             <ul> 
-
                 <li><a href="#" class="actual">Borracho</a>
                     <ul class="submenu">
                         <li><a href="#" >Level 1</a></li>
@@ -34,28 +58,30 @@
                         <li><a href="#" >Con Bart</a></li>
                         <li><a href="#" >Con Lisa</a> </li>
                         <li><a href="#" >Con Maggie</a> </li>
+                        <li><a href="#" >Todos</a> </li>
                     </ul>
                 </li>
-
             </ul>
         </div>	
         <div id="centro">
-
+            
+            <div id="imgElegida">
+                <img class="img" src="miCSS/imgHomer/bart.jpg" />
+                <img class="img" src="miCSS/imgHomer/borracho1.jpg" />
+                <img class="img" src="miCSS/imgHomer/borracho2.gif" />
+                <img class="img" src="miCSS/imgHomer/borracho3.jpg" />
+                <img class="img" src="miCSS/imgHomer/lisa.jpg" />
+                <img class="img" src="miCSS/imgHomer/maggie.gif" />
+                <img class="img" src="miCSS/imgHomer/marge.jpg" />
+                <img class="img" src="miCSS/imgHomer/pensando1.jpg" />
+                <img class="img" src="miCSS/imgHomer/pensando2.jpg" />
+                <img class="img" src="miCSS/imgHomer/pensando3.jpg" />
+                <img class="img" src="miCSS/imgHomer/rockero1.gif" />
+                <img class="img" src="miCSS/imgHomer/rockero2.gif" />
+                <img class="img" src="miCSS/imgHomer/rockero3.gif" />
+                <img class="img" src="miCSS/imgHomer/simpsons.jpg" />
+            </div>
+            
         </div>
-        <script>
-            $("document").ready(function() {
-                $(".submenu").hide();
-                $("a.actual").click(function() {
-                    if ($(this).parent().find('ul').css("display") == "none")
-                    {
-                        $(this).parent().find('ul').show(1000);
-                    }
-                    else
-                    {
-                        $(this).parent().find('ul').hide(1000);
-                    }
-                });
-            });
-        </script>
     </body>
 </html>
