@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="desplegable.css" />
+ 		
+<title>Práctica Árboles Desplegables 2</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+<script type="text/javascript">
+
+		
+$(document).ready(function() {
+	
+	var estado = 0;
+	var panel_mostrado=0;
+	
+	$(".foto").click(function(){
+			
+			var nombre = $(this).attr("src");
+			
+            estado = 0;
+            $("#mandar").attr("value","Mandar al panel izquierdo");
+			$("#imagen_centro img").attr("src", nombre);
+			$("#imagen_centro img").show();
+			$("#izquierda img").attr("src", nombre).hide();
+			
+			
+	});
+	
+
+	$("#panel").click(function(){
+
+	
+	if (panel_mostrado == 0) 
+
+		{
+			$("#panel").text("Ocultar el listado");
+			$("#desplegable").show("1000");
+			panel_mostrado=1;
+		}
+	else
+
+		{
+			$("#panel").text("Mostrar el listado");
+			$("#desplegable").hide("1000");
+			panel_mostrado=0;
+		}
+
+	});
+	
+
+	
+	$("#mandar").click(function(){
+
+		if (estado == 0){
+			estado = 1;
+			$("#imagen_centro img").fadeOut('slow',function(){
+				$("#izquierda img").fadeIn('slow');
+				$("#mandar").attr("value","Traer del panel izquierdo");
+			});
+		}
+		
+		else {
+			estado = 0;
+			$("#izquierda img").fadeOut('slow',function(){
+				$("#imagen_centro img").fadeIn('slow');
+				$("#mandar").attr("value","Mandar al panel izquierdo");
+			});
+		}
+	
+	});
+	
+	
+	
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div id="izquierda"><p>Panel de la izquierda</p><img class="foto_izq"/></div>
+
+<div id="centro"><p>Panel del centro</p>
+	<div id="imagen_centro">
+		<div><img /></div>
+		<div><input id="mandar" type="button" value="Mandar al panel izquierdo"/></div>
+	</div>
+</div>
+<div id ="derecha"><p id="panel">Mostrar el listado</p>
+
+	<div id="desplegable">
+			<img class="foto" src="img/01.jpg" />
+			<img class="foto" src="img/02.jpg" />
+			<img class="foto" src="img/03.jpg" />
+			<img class="foto" src="img/04.jpg" />
+			<img class="foto" src="img/05.jpg" />
+			<img class="foto" src="img/06.jpg" />
+			<img class="foto" src="img/07.jpg" />
+			<img class="foto" src="img/08.jpg" />
+			<img class="foto" src="img/09.jpg" />
+			<img class="foto" src="img/010.jpg" />
+	</div>
+
+
+
+
+</div>
+
+
+</body>
+
+</html>

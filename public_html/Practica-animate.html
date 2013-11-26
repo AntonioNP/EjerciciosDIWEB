@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Ejemplo de animación con animate()</title>
+	<meta charset="utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#right").click(function(){ //Animación del botón derecho.
+			  $(".block").animate({"left": "+=50px"}, "slow");
+		});
+		$("#left").click(function(){//Animación del botón izquierdo.
+		  $(".block").animate({"left": "-=50px"}, "slow");
+		});
+		$("div").click(function(){ //al hacer click en div, cambia de tamaño
+		  $("div").animate({
+		    width: "70%",
+		    opacity: 0.5,
+		    marginLeft: "0.6in",
+		    fontSize: "3em",
+		    borderWidth: "10px"
+		  }, 1500 );
+		});
+	});
+
+	</script>
+	<style>
+	div {
+ 		position:absolute;
+		background-color:#abc;
+		left:50px;
+		width:90px;
+		height:90px;
+		margin:5px;
+	}
+	</style>
+</head>
+<body>
+	<button id="left"><<</button> <button id="right">>></button>
+	<div class="block">Pincha AQUÍ también</div>
+</body>
+</html>
+

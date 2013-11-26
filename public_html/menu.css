@@ -1,0 +1,74 @@
+@charset "utf-8";
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+      
+
+#menu{
+	position: relative;
+	display: block;
+	height: 42px;
+	font-size: 14px;
+	color: #243F00;
+	font-weight: bold;
+	background: transparent url("../images/fondo.gif") repeat-x top left;
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	text-transform: uppercase;
+}
+
+#menu a{
+	color:#243F00;
+}
+
+#menu ul{
+	margin: 0px;
+	padding: 0;
+	list-style-type: none;
+	width: auto;
+}
+
+#menu ul li{
+	display: block;
+	float: left;
+	margin: 0 1px 0 0; 
+	position: relative;
+}
+
+#menu>ul>li>a{
+	display: block;
+	float: left;
+	text-decoration: none;
+	padding: 14px 22px 0 22px;
+	height: 28px;
+}
+
+#menu ul li a:hover, #menu ul li a.actual{
+	color: #fff;
+	background: transparent url("../images/seleccionado.gif") no-repeat 50% 100%;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+#menu ul li:hover ul{
+   	display: block;
+}
+
+#menu ul li ul { 
+	position: absolute;
+	top: 42px; 
+	display: none;
+	left: 20px;
+}
+
+#menu ul li ul li {
+	width: 100%;
+	background: transparent url("../images/fondo.gif") repeat-x top left;
+	border-left: 3px solid #132003;
+}
+
+#menu ul li ul li a{
+	font-size: 10px;
+	display: block;
+	padding: 4px;
+	padding-bottom: 15px;
+}
+ 
+

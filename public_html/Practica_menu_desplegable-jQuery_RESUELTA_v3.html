@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="menu">
+		<ul> 
+			<li><a href="#" >Home</a></li>
+			<li><a href="#" class="actual">Empresa ></a>
+				<ul class="submenu">
+					<li><a href="#" >¿Quiénes somos?</a></li>
+					<li><a href="#" >Historias de éxito</a></li>
+					<li><a href="#" >Metodología</a></li>
+				</ul>
+			</li> 
+			<li><a href="#" class="actual">Servicios ></a>
+				<ul class="submenu">
+					<li><a href="#" >Consultoría</a></li>
+					<li><a href="#" >Proyectos a medida</a></li>
+					<li><a href="#" >Posicionamiento</a> </li>
+				</ul>
+			</li>
+			<li><a href="#" >Contacto</a></li>
+		</ul>
+	</div>	
+	
+	
+	<script>
+
+	
+		$("document").ready(function () {
+			
+			$(".submenu").hide();
+			
+
+			$("a.actual").click(function(){
+
+				if ($(this).parent().find('ul').css("display")=="none")
+
+					{
+						$(this).parent().find('ul').show(1000);
+	
+					}
+
+				else
+
+					{
+						$(this).parent().find('ul').hide(1000);
+					}
+
+			});
+
+		});
+
+	</script>
+</body>
+</html>

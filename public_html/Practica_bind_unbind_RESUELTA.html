@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+ 		
+		<title>Ejemplo uso bind() y unbind()</title>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+		
+		<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			
+		var CambioColor = function() {
+			  if ($(this).css("color")!="rgb(255, 0, 0)")
+        			 $(this).css("color", "rgb(255, 0, 0)");
+     			  else
+      				   $(this).css("color", "rgb(0, 0, 255)");
+		}
+
+		$("p").bind("click mouseenter mouseleave", CambioColor);
+		
+		$("#desactivar-evento").bind("click", function(){
+		      $("p").unbind("click", CambioColor );  })
+
+		$("#activar-evento").bind("click", function(){
+		      $("p").bind("click", CambioColor );  })	
+			
+
+		});
+
+		</script>
+
+
+	</head>
+
+	<body>
+
+		<h1><p> El texto cambia de color al entrar o salir con el ratón o hacer click</p></h1>
+		<input id="desactivar-evento" type=button value="Quitar el cambio de color cuando se hace clic" >
+		<br>
+		<input id="activar-evento" type=button value="Activar el cambio de color cuando se hace clic" >
+		
+	</body>
+
+</html>
+

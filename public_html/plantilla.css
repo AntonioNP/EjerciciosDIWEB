@@ -1,0 +1,37 @@
+#body  /*Define una identificador "body". Es la posición del cuerpo de la página (barra lateral más contenido) */
+{
+	margin:auto auto auto auto;  /* top right bottom left: equivale a poner un sólo auto */
+	width:710px; /* El ancho del estilo lo coloca en 710px */
+}
+
+#header /*Define un identificador "header". Es la posición de la cabecera */
+{
+	margin: 10px auto 10px auto;
+	width: 710px;
+	border: dotted 1px blue;
+}
+
+body.sidebar-main #main, body.main-sidebar #main {
+	width: 490px;
+}
+
+body.main-sidebar #sidebar, body.sidebar-main #sidebar {
+
+	display: block;
+	width: 200px;
+}
+														
+body.main-sidebar #main, body.main-sidebar #sidebar /*Este estilo coloca el sidebar a la derecha y el main a la izquierda*/
+		{
+				float: left;
+				border: dotted 1px #CCC;
+}
+		
+body.sidebar-main #main, body.sidebar-main #sidebar /*Este estilo hace referencia a sidebar-main. este estilo coloca el sidebar a la izquierda y el main a laderecha*/
+	{
+		float: right;
+		border: dotted 1px #CCC;
+}
+	
+
+

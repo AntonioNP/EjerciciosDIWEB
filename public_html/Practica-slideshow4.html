@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Ejemplo de animación con animate()</title>
+	<meta charset="utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+<style>
+
+body{
+	background: #DDD;
+}
+
+#carousel {
+		width: 410px;
+		overflow:		hidden;
+	
+
+	}
+
+	#carousel ul {
+		width:	4100px;
+		padding:0;
+		margin:0;
+	}
+
+	#carousel ul li {
+		width:410px;
+		text-align:		center;
+		height:	600px;
+		list-style:		none;
+		float:	left;
+}
+
+	
+
+</style>
+
+
+  <script type="text/javascript">
+  	$(document).ready(function(){
+
+		$("#siguiente").click(function(){
+			
+				$("#carousel ul").animate({"margin-Left":-410},1000,function(){
+					
+					$(this).find("li:last").after($(this).find("li:first"));
+					
+					$(this).css({"margin-Left":0});
+				});
+			
+		});
+		
+			
+		});
+
+  </script>	
+
+  </head>
+  <body>
+  
+  	<div id="carousel">
+          <ul>
+            <li><img src="img/01.jpg"  /></li>
+            <li><img src="img/02.jpg"  /></li>
+            <li><img src="img/03.jpg"  /></li>
+            <li><img src="img/04.jpg"  /></li>
+			<li><img src="img/05.jpg"  /></li>
+            <li><img src="img/06.jpg"  /></li>
+            <li><img src="img/07.jpg"  /></li>
+            <li><img src="img/08.jpg"  /></li>
+			<li><img src="img/09.jpg"  /></li>
+            <li><img src="img/010.jpg"  /></li>
+         </ul>
+</div>
+			<input id="siguiente" type="button" value="Siguiente" />
+</body>
+</html>
+

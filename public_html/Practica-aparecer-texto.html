@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Aparecer/desparecer texto</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+		<meta charset="utf-8" />
+		
+<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			 $("span").hover(function () { $(this).addClass("adjetivo"); }, function () { $(this).removeClass("adjetivo"); }); 
+			 $("span").click(function () {
+				
+			 	 $(this).fadeOut(1000, function () {
+					  $("div").text("'" + $(this).text() + "' ¡Se ha desvanecido!");
+					  $("div").show();
+					
+				  }); //function del Fade
+			  }); //Function del Click
+			  
+			 $("#boton").click(function() { 
+				$("div").hide();
+				$("span").fadeIn(); 
+				$("span").css("font-weight","bold");
+			});
+			
+		});
+		</script>
+		
+		
+		<style media="screen">
+		body{ font-family: "Century Gothic", "Ubuntu", "Verdana";}
+		span { cursor:pointer; }
+  		span.adjetivo { background:yellow; }
+		div { display:inline; color:red; } /*Se pone inline para que al quitarlo se ocupe su hueco */
+
+		</style>
+
+	</head>
+	<body>
+		<h3>Encuentra los adjetivos <div></div></h3> 
+		<p> En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, 
+		adarga <span>antigua</span>, rocín <span>flaco</span> y galgo <span>corredor</span>. Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los 
+		sábados, lentejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda. El resto della concluían 
+		sayo de velarte, calzas de velludo para las fiestas con sus pantuflos de lo mismo, los días de entre semana se honraba con su vellori de lo 
+		más <span>fino</span>. Tenía en su casa una ama que pasaba de los cuarenta, y una sobrina que no llegaba a los veinte, y un mozo de campo y plaza, 
+		que así ensillaba el rocín como tomaba la podadera. Frisaba la edad de nuestro hidalgo con los cincuenta años, era de complexión <span>recia</span>, 
+		<span>seco</span> de carnes, <span>enjuto</span> de rostro; gran <span>madrugador</span> y amigo de la caza. Quieren decir que tenía el sobrenombre de Quijada o Quesada
+		(que en esto hay alguna diferencia en los autores que deste caso escriben), aunque por conjeturas <span>verosímiles</span> se deja entender que se 
+		llama Quijana; pero esto importa poco a nuestro cuento; basta que en la narración dél no se salga un punto de la verdad. </p>
+		
+		<input type="button" id="boton" value="Mostrar todos los adjetivos de nuevo" />
+	</body>
+</html>
+

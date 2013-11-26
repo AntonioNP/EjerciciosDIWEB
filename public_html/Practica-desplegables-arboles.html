@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="desplegable.css" />
+ 		
+<title>Práctica MENU DESPLEGABLE</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+<script type="text/javascript">
+
+		
+$(document).ready(function() {
+	
+	var mostrado=0;
+	
+	$(".foto").click(function(){
+			
+			var nombre = $(this).attr("src");
+			
+			$("#imagen_centro img").attr("src", nombre);
+	});
+	
+
+	
+	
+	
+	$("#panel").click(function(){
+	
+		if (mostrado==0)
+		{
+			mostrado=1;
+			$("#panel").text("Ocultar el catálogo");
+			$("#desplegable").show("1000");
+		}
+		else
+		{
+			mostrado=0;
+			$("#panel").text("Mostrar el catálogo");
+			$("#desplegable").hide("1000");
+		}
+		
+	
+	
+	});
+	
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div id="izquierda"><p>Panel de la izquierda</p></div>
+
+<div id="centro"><p>Panel del centro</p>
+	<div id="imagen_centro">
+		<img />
+	</div>
+</div>
+<div id ="derecha"><p id="panel">Mostrar el catálogo</p>
+
+	<div id="desplegable">
+			<img class="foto" src="img/01.jpg" />
+			<img class="foto" src="img/02.jpg" />
+			<img class="foto" src="img/03.jpg" />
+			<img class="foto" src="img/04.jpg" />
+			<img class="foto" src="img/05.jpg" />
+			<img class="foto" src="img/06.jpg" />
+			<img class="foto" src="img/07.jpg" />
+			<img class="foto" src="img/08.jpg" />
+			<img class="foto" src="img/09.jpg" />
+			<img class="foto" src="img/010.jpg" />
+	</div>
+
+
+
+
+</div>
+
+
+</body>
+
+</html>

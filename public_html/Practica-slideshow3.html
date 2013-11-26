@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Ejemplo de animación con animate()</title>
+	<meta charset="utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+	
+		$(".foto").click(function(){ 
+				
+			 $(this).animate({"opacity": "0"},1000, function(){
+
+				$(this).animate({"z-index":"-=1"}, 0);
+				$(this).animate({"opacity": "1"},0);
+			
+										
+					});
+								
+				});
+				 
+			  
+			  });
+			  
+	</script>
+	<style>
+	
+
+	body{
+		background-color: rgb(200,200,200);
+	}
+	
+	#contenerdor{
+		position: relative;
+		left: 10em;
+		
+	}
+	
+	.foto{
+		
+		position: absolute;
+		border:2em solid #FFF;
+		width: 18em;
+	
+	}
+	</style>
+</head>
+<body>
+<br />
+<br />
+<div id="contenedor">
+			<img class="foto" src="img/01.jpg" />
+			<img class="foto" src="img/02.jpg" />
+			<img class="foto" src="img/03.jpg" />
+			<img class="foto" src="img/04.jpg" />
+			<img class="foto" src="img/05.jpg" />
+			<img class="foto" src="img/06.jpg" />
+			<img class="foto" src="img/07.jpg" />
+			<img class="foto" src="img/08.jpg" />
+			<img class="foto" src="img/09.jpg" />
+			<img class="foto" src="img/010.jpg" />
+</div>
+
+</body>
+</html>
+
