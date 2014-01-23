@@ -1,0 +1,145 @@
+body{
+    font-family: arial, sans-serif;
+    color: rgb(93,101,106);
+    background-color: rgb(33,32,35);
+    margin-top: 0px; /*No queremos márgenes -esto no suele ser lo habitual-*/
+    margin-right: 0px;
+    font-size: 10px; /*Ponemos el tamaño de fuente en 10px para poder trabajar de manera más comoda con em*/
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+
+.col-md-2{
+    position: relative;
+    background-color: rgb(253,109,5);
+    z-index: 3;
+    padding: 0px;
+    font-weight: bold;
+    color: white;
+}
+
+.col-md-2>span{
+
+    position: absolute;
+    font-size: 150%;
+    z-index: -1;
+    left: 5%;
+    top: 70%;
+}
+
+.col-md-2 img{
+    width: 100%;
+    max-width: 300%;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1.5s;
+    -moz-transition: opacity 1.5s; /* Firefox 4 */	
+    -webkit-transition: opacity 1.5s; /* Safari and Chrome */
+    -o-transition: opacity 1.5; /* Opera */
+}
+
+.col-md-2 img:hover{
+    opacity: 0.15;
+}
+
+/*DEFINICIÓN DEL MENÚ LATERAL*/
+/*Creamos el menú lateral que estará fijo independientemente del scroll*/
+#menu_lateral{
+    position: fixed;
+    width: 17%;
+    height: 100%;
+    background-color: rgb(33,32,35);
+    top: 0px;
+    left: 0px;
+}
+
+/*Este será el tamaño del texto dentro de ese 'contenedor' del menú*/
+#menu_lateral p{
+    font-size: small;
+    line-height: 180%;
+}
+
+/*Creamos una zona DENTRO del menú donde introduciremos los contenidos*/
+#informacion{
+    margin-top: 6em;        
+    /*	margin-left: 5em;*/
+    /*Considero que hay demasiado margen a la izquierda.*/
+    margin-left: 3.5em;
+}
+
+/*Definimos un tamaño para el logo de la empresa, en este caso 12 veces 10px*/
+#informacion .logo{
+    height: 6.5vw; //7.5
+}
+
+/*El siguiente será el que se vea en el móvil*/
+#menu_lateral2{
+    display:none;
+    position:fixed;
+    z-index:20;
+    height: 18vw;
+    background-color: rgb(33,32,35);
+}
+
+#menu_lateral3{
+    position:static;
+    height: 18vw;
+    background-color: rgb(33,32,35);
+}
+
+
+/*El siguiente será el que se vea en el móvil*/
+#informacion2>img{ 
+    width: 100%;
+    height: 25vh;
+    /*    margin-bottom: 1px;*/
+}
+
+/*Listas de derecha e izquierda del menú lateral*/
+.Izquierda a, .Derecha a{
+    font-size: 1.1em;
+    text-decoration: none;
+    color: rgb(253,109,5);
+    font-weight: bold;
+}
+
+.Izquierda {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.Derecha {
+    margin-right: 0.5em;
+}
+
+/*Zona de las redes sociales*/
+
+.redes {
+    clear: both;
+    float: left;
+    margin-top: 2em;
+}
+
+.redes p{
+    font-weight: bold;
+    color: white;
+}
+
+.redes img{
+    width: 50%
+}
+
+.redes li{
+    padding-bottom: 5px;
+}
+
+
+
+
